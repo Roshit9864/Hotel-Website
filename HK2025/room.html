@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lakeside Hotel Views</title>
+  <link rel="stylesheet" href="room.css">
+</head>
+<body>
+
+  <header>
+    <h1>Lakeside Hotel Views</h1>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <img class="slides" src="https://www.hotelscombined.com/rimg/himg/f6/26/f8/expedia_group-45678-9b40eb-961548.jpg?width=968&height=607&crop=true" alt="Lakeside 1">
+    <img class="slides" src="https://www.hotelscombined.com/rimg/himg/06/80/fb/expedia_group-45678-121549648-277571.jpg?width=968&height=607&crop=true" alt="Lakeside 2">
+    <img class="slides" src="https://www.hotelscombined.com/rimg/himg/5f/0a/70/expedia_group-45678-183791700-094259.jpg?width=968&height=607&crop=true" alt="Lakeside 3">
+  </div>
+
+  <!-- Normal Room -->
+  <div class="room-section">
+    <h2>Normal Room</h2>
+    <div class="room-gallery">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/101219422.jpg?k=4f61180c730ca8f653fe4392b882820bb8690452028647b3d27a552b5a55c286&o=&hp=1" alt="Normal Room 1">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/d6/aa/75/lookout-point-lakeside.jpg?w=1600&h=-1&s=1" alt="Normal Room 2">
+    </div>
+  </div>
+
+  <!-- Suite Room -->
+  <div class="room-section" style="background-color:#ecf0f1;">
+    <h2>Suite Room</h2>
+    <div class="room-gallery">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/25233673.jpg?k=202629ba174ac87422113a1935229badaec738bd5d9dcf51e93d51a0f92e9cf5&o=&hp=1" alt="Suite Room 1">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/88784537.jpg?k=60a82d58559e36aabf4a9318dc18afde6d19247b995821c26ab2e9174aed853f&o=&hp=1" alt="Suite Room 2">
+    </div>
+  </div>
+
+  <!-- Deluxe Room -->
+  <div class="room-section">
+    <h2>Deluxe Room</h2>
+    <div class="room-gallery">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/bc/fc/0e/caption.jpg?w=1400&h=800&s=1" alt="Deluxe Room 1">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/d6/aa/21/lookout-point-lakeside.jpg?w=1600&h=-1&s=1" alt="Deluxe Room 2">
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex - 1].style.display = "block";  
+      setTimeout(showSlides, 3000);
+    }
+
+    function logout() {
+      alert("You have been logged out.");
+      window.location.href = "front.html"; 
+    }
+  </script>
+
+</body>
+</html>

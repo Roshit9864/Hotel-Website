@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Signature Suites</title>
+  <link href="/Users/sandeshpanthi04/HK2025/ChatGPT_Image_Apr_12__2025__10_58_23_PM-removebg-preview.png" rel="stylesheet">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+  <div class="signup-box">
+    <h2>Create an Account</h2>
+    <form onsubmit="handleSignup(event)">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" placeholder="Neon" required>
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" placeholder="Loud" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="neon@example.com" required>
+
+      <label for="contact">Contact Number</label>
+      <div class="phone-group">
+        <select id="country-code" required>
+          <option value="+1">🇺🇸 +1 (US)</option>
+          <option value="+44">🇬🇧 +44 (UK)</option>
+          <option value="+91">🇮🇳 +91 (India)</option>
+          <option value="+977">🇳🇵 +977 (Nepal)</option>
+          <option value="+81">🇯🇵 +81 (Japan)</option>
+          <option value="+61">🇦🇺 +61 (Australia)</option>
+          <option value="+49">🇩🇪 +49 (Germany)</option>
+          <option value="+33">🇫🇷 +33 (France)</option>
+          <option value="+86">🇨🇳 +86 (China)</option>
+          <option value="+55">🇧🇷 +55 (Brazil)</option>
+        </select>
+        <input type="tel" id="contact" placeholder="00-0000-0000" required>
+      </div>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <a href="hotel.html" type="submit" class="signup-btn">Sign Up</a>
+    </form>
+
+    <div class="back-link">
+      <p>Already have an account? <a href="login.html">Log In</a></p>
+      <p><a href="front.html">← Back to Home</a></p>
+    </div>
+  </div>
+
+  <script>
+    function handleSignup(event) {
+      event.preventDefault();
+
+      const firstName = document.getElementById("first-name").value;
+      const lastName = document.getElementById("last-name").value;
+      const email = document.getElementById("email").value;
+      const code = document.getElementById("country-code").value;
+      const contact = document.getElementById("contact").value;
+      const password = document.getElementById("password").value;
+
+      const fullPhone = `${code} ${contact}`;
+
+      console.log("Sign Up Data:");
+      console.log("First Name:", firstName);
+      console.log("Last Name:", lastName);
+      console.log("Email:", email);
+      console.log("Contact:", fullPhone);
+      console.log("Password:", password);
+
+    }
+  </script>
+
+</body>
+</html>

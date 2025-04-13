@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: white;
+  }
+
+  .staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .staff-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(195, 60, 60, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+
+  .staff-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .staff-photo {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .staff-details {
+    padding: 20px;
+  }
+
+  .staff-details h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+
+  .staff-details p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .staff-role {
+    font-weight: bold;
+    color: #227ab5;
+  }
+
+  .staff-contact {
+    color: #555;
+  }

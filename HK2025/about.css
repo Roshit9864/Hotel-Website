@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+  }
+  h2 {
+    color: #2c3e50;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  footer {
+    text-align: center;
+    background-color: #2c3e50;
+    color: #2c3e50;
+    padding: 10px;
+    margin-top: 30px;
+  }
+
+  .body3 {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: black;
+    color: #2c3e50;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px;
+  }
+
+  .section {
+    background: white;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .section h2 {
+    color: #d35400;
+    margin-bottom: 10px;
+  }
+
+  .section p {
+    font-size: 16px;
+    color: #333;
+    margin: 8px 0;
+  }
+
+  .important {
+    font-weight: bold;
+  }
+
+  footer {
+    text-align: center;
+    background-color: black;
+    color: #2c3e50;
+    padding: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px 10px;
+    }
+
+    .section {
+      padding: 15px 20px;
+    }
+  }
+
+  
+
+
+  .fab-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fab-button {
+    width: 40px;
+    height: 40px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    padding : 1px;
+  }
+
+  .fab-button:hover {
+    transform: scale(1.2);
+    background-color: #6b5749;
+  }
+
+  .fab-options {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .fab-options a {
+    background-color:white;
+    color: #2c3e50;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+  }
+
+  .fab-options a:hover {
+    background-color: black;
+    color: white;
+  }   

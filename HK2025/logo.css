@@ -1,0 +1,15 @@
+.top-logo {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    width: 130px;
+    height: 130px;
+    z-index: 999;
+    transition: transform 0.3s;
+    padding: 2px;
+  }
+  
+  .top-logo:hover {
+    transform: scale(1.1);
+  }
+  

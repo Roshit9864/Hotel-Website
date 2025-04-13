@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(66, 66, 158);
+    color: #333;
+  }
+
+  nav {
+    background: linear-gradient(to right, rgb(66, 66, 158), #dce1e6);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: rgb(66, 66, 158);
+  }
+
+  .hero {
+    height: 90vh;
+    background-image: url('https://beach.palaceresorts.com/bed-superior-deluxe-ocean-view-beach-palace_ab07beda98.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .room-container {
+    max-width: 1100px;
+    margin: -60px auto 60px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+
+  .room-description {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .price-tag {
+    font-size: 20px;
+    color: rgb(66, 66, 158);
+    font-weight: 600;
+    background-color: #e6f0ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .book-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, rgb(66, 66, 158), white);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.5);
+  }
+
+  .book-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #0095ff);
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 36px;
+    }
+
+    .room-container {
+      padding: 25px;
+    }
+  }

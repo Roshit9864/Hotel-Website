@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pay.css">
+  <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="hotel.css">
+</head>
+<body onload="selectCardType(document.querySelector('.card-icon'), 'Visa')">
+<div class="ex">
+  <div class="payment-box">
+    <div class="form-side">
+      <h2>Enter Payment Details</h2>
+
+      <label for="cardholder">Cardholder Name</label>
+      <input type="text" id="cardholder" placeholder="loud max" required>
+
+      <label>Card Type</label>
+      <div class="card-icons">
+        <button type="button" class="card-icon" onclick="selectCardType(this, 'Visa')">Visa</button>
+        <button type="button" class="card-icon" onclick="selectCardType(this, 'MasterCard')">MasterCard</button>
+        <button type="button" class="card-icon" onclick="selectCardType(this, 'Amex')">Amex</button>
+      </div>
+      <input type="hidden" id="cardtype" name="cardtype">
+
+      <label for="cardnumber">Card Number</label>
+      <input type="text" id="cardnumber" placeholder="1234 5678 9012 3456" required>
+
+      <div class="inline-group">
+        <div>
+          <label for="exp">Expiry Date</label>
+          <input type="text" id="exp" placeholder="MM/YY" required>
+        </div>
+        <div>
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" placeholder="123" required>
+        </div>
+      </div>
+
+      <label for="billing">Billing Address</label>
+      <input t payment
+ype="text" id="billing" placeholder="123 Main St, City, ZIP" required>
+
+      <button type="submit">Pay Now</button>
+    </div>
+    
+    </div>
+  </div>
+  <img src="/Users/sandeshpanthi04/HK2025/ChatGPT_Image_Apr_12__2025__10_58_23_PM-removebg-preview.png" 
+  alt="Signature Suites Logo" class="top-logo">
+  <script>
+    function selectCardType(btn, type) {
+      document.querySelectorAll('.card-icon').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('cardtype').value = type;
+    }
+  </script>
+</div>
+</body>
+</html>
